@@ -1,0 +1,29 @@
+{
+  "name": "mcart_nodeexpressmongo",
+  "version": "1.0.0",
+  "description": "API_NODE_EXPRESS_MONGODB",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harsha1439/mcart_NodeExpressMongo.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongo",
+    "API"
+  ],
+  "author": "Harsha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harsha1439/mcart_NodeExpressMongo/issues"
+  },
+  "homepage": "https://github.com/harsha1439/mcart_NodeExpressMongo#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.0"
+  }
+}
