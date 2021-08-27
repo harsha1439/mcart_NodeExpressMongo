@@ -24,7 +24,7 @@ try {
             req.body.password = hashPwd
             const userData = await userModel.create(userDataSanatized)
             if(userData){
-            res.status(200).json({
+            res.status(201).json({
                 message: `User Registered with Name: ${req.body.username}`
             })
         }
@@ -38,4 +38,25 @@ try {
 catch(err){
 
 }
+}
+
+
+
+exports.login = async (req,res) => {
+    try{
+        const user = await userModel.find({username:req.body.username})
+        if(user.length>0){
+            const match = bcrypt.compareSync(req.body.password,user[0].password)
+            if(match){
+                res.sendStatus(200)
+            }else{
+                res.sendStatus(404)
+            }
+        }else{
+            res.sendStatus(401)
+        }
+    }
+    catch(err){
+
+    }
 }
